@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="XO8IHJi45VYrAzNDWprp" name="ページ1">
-        <mxGraphModel dx="657" dy="1849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="617" dy="1622" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -19,13 +19,13 @@
                 <mxCell id="35" value="itemsテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="350" y="-40" width="200" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="name&#10;introduction&#10;price&#10;item_condition&#10;postage_payer&#10;preparation_day&#10;category&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="35">
+                <mxCell id="36" value="name&#10;explanation &#10;price&#10;condition&#10;user&#10;category&#10;Shipping_charges &#10;Shipping_area&#10;Days_to_ship&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="35">
                     <mxGeometry y="26" width="200" height="134" as="geometry"/>
                 </mxCell>
                 <mxCell id="48" value="residencesテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="350" y="200" width="200" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" value="postal_code&#10;delivery_id &#10;municipality &#10;address &#10;building_name &#10;phone_number &#10;prefectures &#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="48">
+                <mxCell id="49" value="postal_code&#10;Shipping_areamunicipality &#10;address &#10;building_name &#10;phone_number &#10; &#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="48">
                     <mxGeometry y="26" width="200" height="134" as="geometry"/>
                 </mxCell>
                 <mxCell id="57" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;" edge="1" parent="1">
