@@ -7,7 +7,7 @@
                 <mxCell id="2" value="usersテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="50" y="-40" width="210" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="nickname&#10;email &#10;first_name&#10;first_name kana&#10;last_name&#10;last_name kana&#10;birthday&#10;encrypted_password&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="2">
+                <mxCell id="3" value="nickname&#10;email &#10;first_name&#10;first_name_kana&#10;last_name&#10;last_name_kana&#10;birthday&#10;encrypted_password&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="2">
                     <mxGeometry y="26" width="210" height="134" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="purchasesテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
@@ -19,7 +19,7 @@
                 <mxCell id="35" value="itemsテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="350" y="-40" width="200" height="160" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="name&#10;explanation &#10;price&#10;condition&#10;user&#10;category&#10;Shipping_charges &#10;Shipping_area&#10;Days_to_ship&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="35">
+                <mxCell id="36" value="name&#10;explanation &#10;price&#10;condition_id&#10;user&#10;category_id&#10;Shipping_charge_id&#10;Shipping_area_id&#10;Days_to_ship_id&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="35">
                     <mxGeometry y="26" width="200" height="134" as="geometry"/>
                 </mxCell>
                 <mxCell id="48" value="residencesテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">

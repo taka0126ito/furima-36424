@@ -9,8 +9,8 @@
 | nickname              |string        | null:false  |
 | last_name             |string        | null:false  |
 | first_name            |string        | null:false  |
-| last_name kana        |string        | null:false  |
-| first_name kana       |string        | null:false  |
+| last_name_kana        |string        | null:false  |
+| first_name_kana       |string        | null:false  |
 | birthday              |date          | null:false  |
 
 
@@ -28,17 +28,17 @@ has_many :items
 |----------------------------------------------------|
 | name                 |string        | null:false  |
 | explanation          |text          | null:false  |
-| condition            |string        | null:false  |
+| condition_id            |integer        | null:false  |
 | user                 |references    | null:false, foreign_key: true |
-| Shipping_charge      |integer       | null:false  |
-| Shipping_area        |integer       | null:false  |
-| category             |integer       | null:false  |
-| Days_to_ship         |integer       | null:false  |
+| Shipping_charge_id      |integer       | null:false  |
+| Shipping_area_id        |integer       | null:false  |
+| category_id             |integer       | null:false  |
+| Days_to_ship_id         |integer       | null:false  |
 | price                |integer       | null:false  |
 
 ### Association
 belongs_to :user
-has_one :purchases
+has_one :purchase
 
 
 ## residencesテーブル
@@ -47,9 +47,10 @@ has_one :purchases
 | postal_code          |string        | null:false  |
 | municipality         |string        | null:false  |
 | address              |integer       | null:false  |
-| building_name        |integer        | 
+| building_name        |integer        
 | phone_number         |integer       | null:false  |
-| Shipping_area        |integer       | null:false  |
+| Shipping_area_id     |integer       | null:false  |
+| purchase_id          |integer       | null:false  |
 
 
 ### Association
