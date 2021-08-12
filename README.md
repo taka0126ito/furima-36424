@@ -46,9 +46,9 @@ has_one :purchase
 |----------------------------------------------------|
 | postal_code          |string        | null:false  |
 | municipality         |string        | null:false  |
-| address              |integer       | null:false  |
-| building_name        |integer        
-| phone_number         |integer       | null:false  |
+| address              |string        | null:false  |
+| building_name        |string       
+| phone_number         |string        | null:false  |
 | Shipping_area_id     |integer       | null:false  |
 | purchase_id          |integer       | null:false  |
 
