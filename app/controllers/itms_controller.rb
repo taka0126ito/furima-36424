@@ -1,0 +1,2 @@
+class ItmsController < ApplicationController
+end
