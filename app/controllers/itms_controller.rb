@@ -1,2 +1,0 @@
-class ItmsController < ApplicationController
-end
