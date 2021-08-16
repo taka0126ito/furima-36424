@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
   with_options presence: true do
-    
+
     validates :nickname
     validates :explanation
     validates :condition_id
@@ -10,4 +10,9 @@ class Item < ApplicationRecord
     validates :category_id 
     validates :Days_to_ship_id 
     validates :price
+
+    belongs_to :user
+ #has_one :purchase
+
+ has_one_attached :image
 end
