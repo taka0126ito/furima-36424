@@ -1,5 +1,14 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions 
+  belongs_to :user
+  belongs_to :category
+  belongs_to :shipping_charge
+  belongs_to :shipping_area
+  belongs_to :days_to_ship
+  belongs_to :condition
+  #has_one :purchase
+  
+  has_one_attached :image
   with_options presence: true do
 
     validates :name
@@ -10,18 +19,9 @@ class Item < ApplicationRecord
     validates :shipping_area_id, numericality: { other_than: 1 , message: "can't be blank"}  
     validates :category_id, numericality: { other_than: 1 , message: "can't be blank"}  
     validates :days_to_ship_id, numericality: { other_than: 1 , message: "can't be blank"}  
-    validates :price
+    validates :price, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/ }
+    validates :image
 
 end
-
-belongs_to :user
-belongs_to :category
-belongs_to :shipping_charge
-belongs_to :shipping_area
-belongs_to :days_to_ship
-belongs_to :condition
-#has_one :purchase
-
-has_one_attached :image
 
 end
