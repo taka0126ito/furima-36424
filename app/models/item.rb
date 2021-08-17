@@ -12,15 +12,18 @@ class Item < ApplicationRecord
   with_options presence: true do
 
     validates :name
-    validates :explanation
-    validates :condition_id, numericality: { other_than: 1 , message: "can't be blank"}  
-    validates :user
-    validates :shipping_charge_id, numericality: { other_than: 1 , message: "can't be blank"}   
-    validates :shipping_area_id, numericality: { other_than: 1 , message: "can't be blank"}  
-    validates :category_id, numericality: { other_than: 1 , message: "can't be blank"}  
-    validates :days_to_ship_id, numericality: { other_than: 1 , message: "can't be blank"}  
-    validates :price, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/ }
+    validates :explanation 
+    validates :price, inclusion: { in: 300..9_999_999 }, format: { with: /\A[0-9]+\z/}
     validates :image
+
+    with_options numericality: { other_than: 1 , message: "can't be blank"} do
+    validates :condition_id
+    validates :shipping_charge_id
+    validates :shipping_area_id
+    validates :category_id
+    validates :days_to_ship_id
+ 
+    end
 
 end
 
