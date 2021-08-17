@@ -30,8 +30,8 @@ has_many :items
 | explanation          |text          | null:false  |
 | condition_id            |integer        | null:false  |
 | user                 |references    | null:false, foreign_key: true |
-| Shipping_charge_id      |integer       | null:false  |
-| Shipping_area_id        |integer       | null:false  |
+| shipping_charge_id      |integer       | null:false  |
+| shipping_area_id        |integer       | null:false  |
 | category_id             |integer       | null:false  |
 | Days_to_ship_id         |integer       | null:false  |
 | price                |integer       | null:false  |
@@ -49,7 +49,7 @@ has_one :purchase
 | address              |string        | null:false  |
 | building_name        |string       
 | phone_number         |string        | null:false  |
-| Shipping_area_id     |integer       | null:false  |
+| shipping_area_id     |integer       | null:false  |
 | purchase_id          |integer       | null:false  |
 
 
