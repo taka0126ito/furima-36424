@@ -33,7 +33,7 @@ has_many :items
 | shipping_charge_id      |integer       | null:false  |
 | shipping_area_id        |integer       | null:false  |
 | category_id             |integer       | null:false  |
-| Days_to_ship_id         |integer       | null:false  |
+| days_to_ship_id         |integer       | null:false  |
 | price                |integer       | null:false  |
 
 ### Association
