@@ -81,14 +81,14 @@ RSpec.describe PurchaseResidence, type: :model do
 
       it 'shipping_area_idに「---」が選択されている場合は購入できないこと' do
         
-        @purchase_residence.shipping_area_id = "テスト"
+        @purchase_residence.shipping_area_id = 1
         @purchase_residence.valid?
         expect(@purchase_residence.errors.full_messages).not_to include("shipping_area can't be blank")
       end
 
       it 'userが紐付いていなければ購入できないこと' do
 
-        @purchase_residence.user_id = "テスト"
+        @purchase_residence.user_id = "nil"
         @purchase_residence.valid?
         expect(@purchase_residence.errors.full_messages).not_to include("User can't be blank")
       end
