@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index,:show]
   before_action :set_item, only: [:edit, :update, :show, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
+  before_action :move_to_present, only: [:edit, :update, :destroy]
 
   def index
     @items = Item.all.order(created_at: :desc)
@@ -22,9 +23,6 @@ def new
 end
 
 def edit
-  if @item.purchase.present?
-  redirect_to root_path
-end
 end
   
 
@@ -62,6 +60,12 @@ def move_to_index
   unless @item.user_id == current_user.id
     redirect_to action: :index
   end
+end
+
+  def move_to_present
+    if @item.purchase.present?
+      redirect_to root_path
+    end
 end
 end
 
