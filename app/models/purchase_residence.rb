@@ -1,9 +1,9 @@
 class PurchaseResidence
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :postal_code, :municipality, :address, :building_name, :phone_number, :shipping_area_id, :purchase_id, :token
+  attr_accessor :user_id, :item_id, :postal_code, :municipality, :address, :building_name, :phone_number, :shipping_area_id, :token
 
   with_options presence: true do
-
+    
     validates :token
     validates :item_id
     validates :postal_code, format: {with: /\A\d{3}[-]\d{4}\z/}

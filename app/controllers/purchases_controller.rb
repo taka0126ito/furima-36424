@@ -1,13 +1,11 @@
 class PurchasesController < ApplicationController
   before_action :authenticate_user!
-  before_action :move_to_index, only: :create
+  before_action :set_item, only: [:index, :create]
+  before_action :move_to_index, only: [:index, :create]
 
    def index
     @purchase_residences =  PurchaseResidence.new
-    @item = Item.find(params[:item_id])
-    if current_user == @item.user
-        redirect_to root_path
-    end
+   
   end
 
 
@@ -17,7 +15,7 @@ class PurchasesController < ApplicationController
   def create
 
     @purchase_residences = PurchaseResidence.new(purchase_params)
-    @item = Item.find(params[:item_id])
+    
     if @purchase_residences.valid?
       pay_item
        @purchase_residences.save
@@ -34,12 +32,12 @@ class PurchasesController < ApplicationController
     private
 
   def purchase_params
-    params.require(:purchase_residence).permit(:postal_code, :municipality, :address, :building_name, :phone_number, :shipping_area_id, :purchase_id).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
+    params.require(:purchase_residence).permit(:postal_code, :municipality, :address, :building_name, :phone_number, :shipping_area_id).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
   end
  
 
   def move_to_index
-    unless @item.user_id == current_user.id
+    if @item.user_id == current_user.id
       redirect_to root_path
     end
   end
@@ -52,6 +50,8 @@ class PurchasesController < ApplicationController
       currency: 'jpy'            
     )
   end
-
+ def set_item
+  @item = Item.find(params[:item_id])
+ end
   
 end
