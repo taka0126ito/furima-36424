@@ -47,6 +47,6 @@ class PurchasesController < ApplicationController
   end
 
   def move_to_present
-    redirect_to root_path unless @item.present?
+    redirect_to root_path unless @item.purchase.present?
   end
 end
