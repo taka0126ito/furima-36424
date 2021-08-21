@@ -5,8 +5,8 @@ FactoryBot.define do
     postal_code {'111-1111'}          
     municipality {'横浜市'}     
     shipping_area_id {2}    
-    address {2}            
-    phone_number {19012345678}   
+    address {'2'}            
+    phone_number {'19012345678'}   
     token {'00000000000000'}  
 
   end

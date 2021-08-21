@@ -3,7 +3,6 @@ class PurchasesController < ApplicationController
   before_action :set_item, only: [:index, :create]
   before_action :move_to_present, only: [:index]
   before_action :move_to_index, only: [:index, :create]
-  before_action :move_to_index, only: [:index, :create]
   
   
 
