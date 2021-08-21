@@ -6,7 +6,8 @@
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
-require("../item.js")
+require("../item")
+require("../card")
 
 
 
