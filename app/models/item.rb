@@ -12,8 +12,8 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :explanation
-    validates :price, numericality: { with: /\A[0-9]+\z/, message: 'only number' }
-    validates :price, inclusion: { in: 300..9_999_999 }
+    validates :price, numericality: { with: /\A[0-9]+\z/, message: 'only number'}
+    validates :price, inclusion: { in: 300..9_999_999 }, allow_blank: true
     validates :image
 
     with_options numericality: { other_than: 1, message: "can't be blank" } do
