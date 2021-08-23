@@ -12,7 +12,7 @@ class User < ApplicationRecord
     validates :first_name, format: { with: /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/ }
     validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
     validates :birthday
-    validates :encrypted_password,:password,:password_confirmation,format:{with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{7,}/}
+    validates :encrypted_password,:password,:password_confirmation,format:{with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/}
   end
 
   has_many :purchases
